@@ -37,6 +37,7 @@ header .nav nav ul {
 header .nav nav ul li {
   list-style-type: none;
   margin-left: 3px;
+  font-family: arial, sans-serif;
 }
 header .nav nav ul li a {
   text-decoration: none;
@@ -61,4 +62,104 @@ header .nav img {
   width: 15px;
   height: 15px;
   border-radius: 50%;
+}
+.conteiner {
+  width: 100%;
+  height: 80%;
+  padding: 1rem 0;
+  min-width: 320px;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+}
+.conteiner .google-comteiner {
+  width: 80%;
+  min-width: 200px;
+  height: 90%;
+}
+.conteiner .logo {
+  width: 100%;
+  min-width: 200px;
+  min-height: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.conteiner .logo img {
+  width: 50%;
+  height: 30%;
+  min-width: 120px;
+  min-height: 50px;
+}
+.conteiner .search-google {
+  margin-top: 1rem;
+  width: 90%;
+  min-width: 180px;
+  min-height: 15px;
+  height: 30%;
+  position: relative;
+}
+.conteiner .google-comteiner input {
+  width: 100%;
+  background: 0 1px 6px rgb(32 33 36 / 28%);
+  border: 1px solid #dfe1e5;
+  outline: none;
+  border-radius: 25px;
+  height: 100%;
+  padding: 0 25px;
+  min-height: 25px;
+}
+.conteiner .google-comteiner input:hover {
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+  border-color: rgba(223, 225, 229, 1);
+}
+.conteiner .google-comteiner .search-google span:nth-of-type(1) {
+  position: absolute;
+  top: 25%;
+  left: 3%;
+}
+.conteiner .google-comteiner .search-google span:nth-of-type(2) {
+  position: absolute;
+  top: 25%;
+  right: 3%;
+}
+.conteiner .google-comteiner .search-google span:nth-of-type(1) i {
+  color: blue;
+}
+.conteiner .google-conteiner__filter {
+  padding-top: 10px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.google-conteiner__filter .search-google__info {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+.google-conteiner__filter .search-google__info button {
+  min-width: 30px;
+  width: 40%;
+  min-height: 20px;
+  outline: none;
+  border: none;
+  font-size: 0.8rem;
+  background-color: #f8f9fa;
+}
+.google-conteiner__filter .search-google__info button:hover {
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+  cursor: pointer;
+}
+.google-conteiner__filter .author--google {
+  margin: 5px;
+  color: #222;
+  font-size: 0.4rem;
+  font-family: arial, sans-serif;
+}
+.google-conteiner__filter .author--google a {
+  text-decoration: none;
 }
