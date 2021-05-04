@@ -5,44 +5,55 @@
 }
 html {
   font-size: 62.5%;
+  font-family: arial, sans-serif;
 }
 body {
+  position: relative;
   width: 100%;
   height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 9fr 2fr;
 }
+
+/* Header Styles */
 header {
   min-width: 320px;
   width: 100%;
-  height: 30px;
+  height: 100%;
+  min-height: 30px;
   display: flex;
   justify-content: flex-end;
   padding: 5px;
 }
 header .nav {
-  min-width: 120px;
-  width: 20%;
+  min-width: 180px;
+  max-width: 220px;
+  width: 40%;
   height: 100%;
   display: flex;
   justify-content: space-between;
 }
 header .nav nav {
-  width: 60%;
+  width: 75%;
   padding: 5px 0;
 }
 header .nav nav ul {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 header .nav nav ul li {
   list-style-type: none;
-  margin-left: 3px;
+
   font-family: arial, sans-serif;
 }
 header .nav nav ul li a {
   text-decoration: none;
-  color: black;
+  color: #3c4043;
   font-size: 0.8rem;
+}
+header .nav nav ul li a:hover {
+  text-decoration: underline;
 }
 header span {
   width: 10px;
@@ -63,10 +74,11 @@ header .nav img {
   height: 15px;
   border-radius: 50%;
 }
+/* Conteiner Styles */
 .conteiner {
   width: 100%;
-  height: 80%;
-  padding: 1rem 0;
+  height: 95%;
+  padding: 3rem 0;
   min-width: 320px;
   min-height: 400px;
   display: flex;
@@ -75,29 +87,32 @@ header .nav img {
 .conteiner .google-comteiner {
   width: 80%;
   min-width: 200px;
-  height: 90%;
+  height: 100%;
 }
 .conteiner .logo {
   width: 100%;
-  min-width: 200px;
-  min-height: 80px;
-
+  min-width: 150px;
+  min-height: 40px;
+  max-height: 260px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .conteiner .logo img {
-  width: 50%;
-  height: 30%;
-  min-width: 120px;
+  width: 35%;
+  height: 20%;
+  margin-bottom: 2rem;
+  min-width: 80px;
+  max-width: 320px;
   min-height: 50px;
 }
 .conteiner .search-google {
-  margin-top: 1rem;
-  width: 90%;
+  max-width: 650px;
+  width: 80%;
   min-width: 180px;
   min-height: 15px;
-  height: 30%;
+  max-height: 35px;
+  height: 80%;
   position: relative;
 }
 .conteiner .google-comteiner input {
@@ -106,8 +121,9 @@ header .nav img {
   border: 1px solid #dfe1e5;
   outline: none;
   border-radius: 25px;
+  color: #3c4043;
   height: 100%;
-  padding: 0 25px;
+  padding: 0 10%;
   min-height: 25px;
 }
 .conteiner .google-comteiner input:hover {
@@ -129,7 +145,7 @@ header .nav img {
   color: blue;
 }
 .conteiner .google-conteiner__filter {
-  padding-top: 10px;
+  padding-top: 20px;
   min-width: 200px;
   display: flex;
   flex-direction: column;
@@ -137,6 +153,7 @@ header .nav img {
   justify-content: center;
 }
 .google-conteiner__filter .search-google__info {
+  max-width: 400px;
   width: 70%;
   display: flex;
   justify-content: space-around;
@@ -144,6 +161,7 @@ header .nav img {
 .google-conteiner__filter .search-google__info button {
   min-width: 30px;
   width: 40%;
+  color: #3c4043;
   min-height: 20px;
   outline: none;
   border: none;
@@ -156,52 +174,59 @@ header .nav img {
 }
 .google-conteiner__filter .author--google {
   margin: 5px;
-  color: #222;
+  color: #3c4043;
   font-size: 0.4rem;
   font-family: arial, sans-serif;
 }
 .google-conteiner__filter .author--google a {
   text-decoration: none;
 }
+
+/* Footer Styles */
 footer {
+  height: 100%;
   width: 100%;
   min-height: 20px;
+  max-height: 200px;
   min-width: 320px;
-  font-family: arial, sans-serif;
-  font-size: 0.2rem;
+  font-size: 1rem;
 }
 footer .origin {
+  text-align: center;
   width: 100%;
   min-width: 320px;
-  min-height: 10px;
   color: rgba(2, 0, 0, 0.54);
-  height: 10%;
+  height: 45%;
+  padding: 1rem;
   background-color: #f2f2f2;
 }
 footer .footer-conteiner {
   width: 100%;
+  height: 50%;
   min-width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #f2f2f2;
 }
-footer a:hover {
-  cursor: pointer;
-  text-decoration: rgba(2, 0, 0, 0.54);
-}
+
 .footer-conteiner ul {
   list-style-type: none;
   display: flex;
 }
-
+.footer-conteiner ul li {
+  margin: 0 10px;
+  padding-bottom: 1px;
+}
+footer a:hover {
+  border-bottom: 1px solid rgba(2, 0, 0, 0.54);
+}
 .footer-conteiner ul a {
   text-decoration: none;
   color: rgba(2, 0, 0, 0.54);
 }
 
 .footer-conteiner .google-info {
-  min-width: 320px;
   min-height: 10px;
   height: 100%;
   display: flex;
@@ -210,7 +235,6 @@ footer a:hover {
 }
 
 .footer-conteiner .search-info {
-  min-width: 320px;
   height: 100%;
   min-height: 10px;
   display: flex;
@@ -221,9 +245,7 @@ footer a:hover {
   color: rgba(2, 0, 0, 0.54);
 }
 .footer-conteiner .terminos-info {
-  min-width: 320px;
   display: flex;
-
   min-height: 10px;
   justify-content: center;
   height: 100%;
