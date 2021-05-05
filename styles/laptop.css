@@ -1,0 +1,23 @@
+body {
+  border: 2px solid blue;
+}
+header .nav nav ul li a {
+  font-size: 1rem;
+}
+footer {
+  font-size: 1.2rem;
+}
+footer .footer-conteiner {
+  height: 75%;
+  flex-direction: row;
+  padding: 10px;
+}
+footer .origin {
+  text-align: start;
+  height: 50%;
+  padding: 20px;
+}
+footer .footer-conteiner {
+  height: 50%;
+  padding-top: 20px;
+}
